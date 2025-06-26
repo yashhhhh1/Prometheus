@@ -3,7 +3,7 @@ services:
     name: flask-app
     env: docker
     plan: free
-    repo: https://github.com/your-username/your-repo
+    repo: https://github.com/yyashhhhh1/Prometheus
     dockerfilePath: flask-app/Dockerfile
     buildCommand: ""
     startCommand: ""
@@ -15,7 +15,7 @@ services:
     name: prometheus-service
     env: docker
     plan: free
-    repo: https://github.com/your-username/your-repo
+    repo: https://github.com/yyashhhhh1/Prometheus
     dockerfilePath: prometheus/Dockerfile
     buildCommand: ""
     startCommand: ""
