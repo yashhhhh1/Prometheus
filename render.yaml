@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: flask-app
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    buildCommand: ""
+    startCommand: ""
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 5000
+    ports:
+      - port: 5000
+
+  - type: web
+    name: prometheus
+    env: docker
+    plan: free
+    dockerfilePath: ./prometheus/Dockerfile
+    autoDeploy: true
+    ports:
+      - port: 9090
