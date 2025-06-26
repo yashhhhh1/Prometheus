@@ -8,6 +8,18 @@ REQUEST_COUNT = Counter("http_requests_total", "Total HTTP Requests")
 def home():
     REQUEST_COUNT.inc()
     return "Hello from Flask + Docker + Render!"
+@app.route('/v1')
+def home():
+    REQUEST_COUNT.inc()
+    return "Hello from Flask + Docker + Render! v1"
+@app.route('/v2')
+def home():
+    REQUEST_COUNT.inc()
+    return "Hello from Flask + Docker + Render! v2"
+@app.route('/v3')
+def home():
+    REQUEST_COUNT.inc()
+    return "Hello from Flask + Docker + Render! v3"
 
 @app.route("/metrics")
 def metrics():
