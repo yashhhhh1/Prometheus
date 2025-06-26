@@ -4,4 +4,4 @@ global:
 scrape_configs:
   - job_name: 'flask-app'
     static_configs:
-      - targets: ['<FLASK_RENDER_URL>:5000']  # Replace with actual Flask service hostname
+      - targets: ['https://prometheus-uyp9.onrender.com/:5000']  # Replace with actual Flask service hostname
