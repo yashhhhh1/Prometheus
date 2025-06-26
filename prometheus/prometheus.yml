@@ -3,5 +3,7 @@ global:
 
 scrape_configs:
   - job_name: 'flask-app'
+    scheme: https
     static_configs:
-      - targets: ['https://prometheus-uyp9.onrender.com/:5000']  # Replace with actual Flask service hostname
+      - targets: ['prometheus-uyp9.onrender.com']  # Replace with actual Flask service hostname
+    metrics_path: '/metrics'
